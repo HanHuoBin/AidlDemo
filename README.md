@@ -2,10 +2,10 @@
 
 ###### 服务端
 
- * 1. 定义一个AIDL接口
+ * 1 定义一个AIDL接口
   * 1.1 如果是一个bean对象，需要一个parcelable类型的aidl
- * 2. 为AIDL（Service）实现对应Stub（主要是实现aidl接口）
- * 3. 将服务“暴露”给客户程序使用
+ * 2 为AIDL（Service）实现对应Stub（主要是实现aidl接口）
+ * 3 将服务“暴露”给客户程序使用
   * 3.1 注册文件注册service
   * 3.2 intent启动service
 
