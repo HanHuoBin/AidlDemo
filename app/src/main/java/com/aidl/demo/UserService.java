@@ -12,16 +12,10 @@ import android.util.Log;
  */
 
 public class UserService extends Service {
-    UserLoginListener listener;
 
     @Override
     public void onCreate() {
         super.onCreate();
-    }
-
-    public void setListener(UserLoginListener listener){
-        Log.e("main","setListener");
-        this.listener = listener;
     }
 
     @Nullable
@@ -38,9 +32,6 @@ public class UserService extends Service {
             @Override
             public boolean login(String mobile, String password) throws RemoteException {
                 Log.e("main",mobile+":"+password);
-                if(listener!=null){
-                    listener.login(mobile, password);
-                }
                 return false;
             }
 
@@ -61,8 +52,4 @@ public class UserService extends Service {
         };
     }
 
-    interface UserLoginListener {
-        void login(String mobile, String password);
-
-    }
 }

@@ -19,7 +19,7 @@
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:text="login"
+        android:text="getToken"
         android:background="#ffffff"
         android:gravity="center"/>
     <TextView

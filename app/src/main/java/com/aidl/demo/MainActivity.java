@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements UserService.UserLoginListener {
+public class MainActivity extends AppCompatActivity {
 
     private TextView contentTv;
     IUserAidlInterface userService;
@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements UserService.UserL
         Intent intent = new Intent(this,service.getClass());
 //        intent.setClassName("com.aidl.demo", UserService.class.getName());
         bindService(intent,connection , Context.BIND_AUTO_CREATE);
-        service.setListener(this);
     }
 
     ServiceConnection connection = new ServiceConnection() {
@@ -43,13 +42,7 @@ public class MainActivity extends AppCompatActivity implements UserService.UserL
             userService = null;
         }
     };
-
-    @Override
-    public void login(String mobile, String password) {
-        Log.e("main",mobile+"::"+password);
-        contentTv.setText(mobile + "---" + password);
-    }
-
+    
     @Override
     protected void onDestroy() {
         super.onDestroy();
