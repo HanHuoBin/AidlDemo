@@ -15,3 +15,5 @@
  * 2.通过Intent启动对应的Service
     * 2.1 ServiceConnection中onServiceConnected方法得到Aidl接口对象
  * 3.接下来就可以使用了
+
+ [blog](https://www.jianshu.com/p/afc6d85f533c)
